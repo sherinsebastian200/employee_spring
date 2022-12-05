@@ -1,25 +1,26 @@
 package com.example.employee_backend.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 
 public class EmployeeController {
-    @GetMapping("/")
+    @PostMapping("/")
     public String Welcomepage()
     {
         return "Welcome to Employee website";
     }
 
-    @GetMapping("/add")
+    @PostMapping("/add")
     public String Addemployee()
     {
         return "Employee add page";
     }
 
 
-    @GetMapping("/search")
+    @PostMapping("/search")
     public String Searchmployee()
     {
         return "Employee search page";
@@ -27,7 +28,7 @@ public class EmployeeController {
 
 
 
-    @GetMapping("/edit")
+    @PostMapping("/edit")
     public String Editmployee()
     {
         return "Employee edit page";
@@ -42,7 +43,7 @@ public class EmployeeController {
     }
 
 
-    @GetMapping("/delete")
+    @PostMapping("/delete")
     public String Deletemployee()
     {
         return "Delete Employee";
