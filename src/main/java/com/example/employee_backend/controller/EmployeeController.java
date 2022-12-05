@@ -35,6 +35,14 @@ public class EmployeeController {
 
 
 
+    @GetMapping("/view")
+    public String Viewmployee()
+    {
+        return "View all Employees";
+    }
+
+
+
 
 
 
