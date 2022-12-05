@@ -12,6 +12,14 @@ public class EmployeeController {
         return "Welcome to Employee website";
     }
 
+    @GetMapping("/add")
+    public String Addemployee()
+    {
+        return "Employee add page";
+    }
+
+
+
 
 
 
