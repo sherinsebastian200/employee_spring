@@ -1,7 +1,9 @@
 package com.example.employee_backend.controller;
 
+import com.example.employee_backend.model.Employees;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -13,41 +15,15 @@ public class EmployeeController {
         return "Welcome to Employee website";
     }
 
-    @PostMapping("/add")
-    public String Addemployee()
-    {
-        return "Employee add page";
-    }
+    @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
 
-
-    @PostMapping("/search")
-    public String Searchmployee()
-    {
-        return "Employee search page";
+    public String Addemployee(@RequestBody Employees e){
+        System.out.println(e.getEmpname().toString());
+        return "Employees added successfully";
     }
 
 
 
-    @PostMapping("/edit")
-    public String Editmployee()
-    {
-        return "Employee edit page";
-    }
-
-
-
-    @GetMapping("/view")
-    public String Viewmployee()
-    {
-        return "View all Employees";
-    }
-
-
-    @PostMapping("/delete")
-    public String Deletemployee()
-    {
-        return "Delete Employee";
-    }
 
 
 
