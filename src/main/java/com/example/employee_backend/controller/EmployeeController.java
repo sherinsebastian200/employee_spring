@@ -18,7 +18,14 @@ public class EmployeeController {
     @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
 
     public String Addemployee(@RequestBody Employees e){
+        System.out.println(e.getEmpcode().toString());
         System.out.println(e.getEmpname().toString());
+        System.out.println(e.getDesignation().toString());
+        System.out.println(e.getSalary());
+        System.out.println(e.getCompanyname().toString());
+        System.out.println(e.getMobno().toString());
+        System.out.println(e.getUsername().toString());
+        System.out.println(e.getPassword().toString());
         return "Employees added successfully";
     }
 
